@@ -5,8 +5,10 @@ import random
 
 def guess_the_number():
 
+
     first_number = int(input("Enter first number range: "))
     second_number = int(input("Enter second number range: "))
+
     correct_answer = random.randint(first_number, second_number)
     attmept = 0
 
@@ -20,11 +22,10 @@ def guess_the_number():
             elif guess < correct_answer:
                 print("try higher")
             elif guess == correct_answer:
-                print(f"you guessed correct nymber in {attmept} attmept")
+                print(f"correct numer was {correct_answer} \nyou guessed correct number in {attmept} attmept")
+                break
         except ValueError:
             print("Sorry, you didn't enter a number.")
 
-
-        return guess_the_number()
 
 guess_the_number()
